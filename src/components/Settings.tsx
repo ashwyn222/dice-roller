@@ -128,18 +128,6 @@ export function Settings({ currentTheme, onThemeChange, onBack }: SettingsProps)
           </div>
         </motion.div>
 
-        {/* App Info */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8 }}
-          className="mt-12 text-center opacity-50"
-          style={{
-            color: currentThemeData.text,
-          }}
-        >
-          <p>Version 1.0.0</p>
-        </motion.div>
       </div>
     </div>
   );

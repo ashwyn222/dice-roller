@@ -101,7 +101,11 @@ export const themes = {
 export type Theme = keyof typeof themes;
 
 export default function App() {
-  const [currentTheme, setCurrentTheme] = useState<Theme>('classic-white');
+  const [currentTheme, setCurrentTheme] = useState<Theme>(() => {
+    // Load saved theme from localStorage, fallback to 'classic-white'
+    const savedTheme = localStorage.getItem('diceRollerTheme') as Theme | null;
+    return savedTheme && savedTheme in themes ? savedTheme : 'classic-white';
+  });
   const [showSettings, setShowSettings] = useState(false);
 
   useEffect(() => {
@@ -109,6 +113,9 @@ export default function App() {
     const theme = themes[currentTheme];
     document.body.style.background = theme.background;
     document.body.style.color = theme.text;
+    
+    // Save theme to localStorage
+    localStorage.setItem('diceRollerTheme', currentTheme);
   }, [currentTheme]);
 
   return (
