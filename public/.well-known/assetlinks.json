@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.ashwinsharma.paasa",
+      "sha256_cert_fingerprints": ["56:9A:1F:BF:0C:0F:87:5E:07:F2:F3:45:06:6F:50:70:BB:E7:C5:A1:F7:A1:01:94:0C:8C:D7:51:12:B4:62:19"]
+    }
+  }
+]
