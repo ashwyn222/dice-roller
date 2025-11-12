@@ -99,12 +99,26 @@ Works best on modern browsers with WebGL support:
 - Firefox
 - Safari (iOS)
 
+## Publishing to Play Store
+
+This PWA can be published to the Google Play Store as a Trusted Web Activity (TWA).
+
+**Updating Existing App:**
+- The TWA Android project is in the `android/` folder
+- See [SETUP_TWA_IN_PROJECT.md](./SETUP_TWA_IN_PROJECT.md) for setup instructions
+
+**Quick steps:**
+1. Deploy your PWA to a live HTTPS URL
+2. Initialize TWA in `android/` folder with Bubblewrap
+3. Build Android package
+4. Upload to Google Play Console
+
 ## Project Structure
 
 ```
 dice-roller/
 ├── public/          # Static assets and icons
-├── src/
+├── src/             # React source code
 │   ├── components/  # React components
 │   │   ├── DiceRoller.tsx
 │   │   ├── Settings.tsx
@@ -113,6 +127,8 @@ dice-roller/
 │   ├── App.tsx      # Main app component
 │   ├── main.tsx     # Entry point
 │   └── index.css    # Global styles
+├── android/         # TWA Android project (for Play Store)
+├── dist/            # Built PWA (deployed)
 ├── index.html       # HTML template
 ├── vite.config.ts   # Vite configuration
 └── package.json     # Dependencies
@@ -123,4 +139,3 @@ dice-roller/
 MIT
 
 Enjoy rolling! 🎲
-

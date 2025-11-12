@@ -102,7 +102,6 @@ function DiceFace({ number, theme, transform }: DiceFaceProps) {
 export function DiceRoller({ theme }: DiceRollerProps) {
   const [isRolling, setIsRolling] = useState(false);
   const [rotation, setRotation] = useState({ x: -30, y: 45 });
-  const [currentFace, setCurrentFace] = useState(1);
 
   const rollDice = () => {
     if (isRolling) return;
@@ -130,7 +129,6 @@ export function DiceRoller({ theme }: DiceRollerProps) {
     };
 
     setRotation(newRotation);
-    setCurrentFace(result);
 
     setTimeout(() => {
       setIsRolling(false);

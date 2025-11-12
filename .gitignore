@@ -23,3 +23,35 @@ dist-ssr
 *.sln
 *.sw?
 
+# Android/TWA build outputs (keep source code, ignore builds)
+*.aab
+*.apk
+*.apk.idsig
+app/
+app-release-*
+android/app/build/
+android/.gradle/
+android/build/
+android/local.properties
+.gradle/
+build/
+build.gradle
+settings.gradle
+gradle.properties
+gradle/
+gradlew
+gradlew.bat
+twa-manifest.json
+
+# Keystore files (NEVER commit these!)
+*.keystore
+*.jks
+android/keys/
+
+# Temporary files
+store_icon.png
+manifest-checksum.txt
+
+# Netlify
+.netlify/
+
